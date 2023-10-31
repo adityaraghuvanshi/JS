@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital@1&family=Rubik:wght@300&family=Ubuntu:wght@300&display=swap");
+body {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+.navBar {
+    height: 70px;
+    position: fixed;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px;
+}
+.navBar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+.navBar ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+.navBar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 7px 15px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+.navBar.active a {
+    color: black;
+}
+
+.navBar a:hover {
+    font-size: larger;
+}
+.navBar a.current,
+.nav a:hover {
+    font-weight: bold;
+}
+#shop-logo {
+    padding-top: 0%;
+    margin-top: 0%;
+    width: 120px;
+    height: 70px;
+}
+.logo {
+    justify-content: center;
+}
+/* screen 1 */
+
+.slider-container {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.left-slide {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.left-slide > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.left-slide h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+
+.right-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.right-slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+.image-container {
+    display: flex;
+}
+
+.image-container img {
+    width: 150px;
+    height: 1500px;
+}
+
+/* screen 2 */
+.image-placeholder {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    height: 900px;
+}
+.card {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 350px;
+    margin: 12px;
+    transform: translateY(100px);
+}
+#first-card {
+    transition: transform 0.5s ease;
+}
+#second-card {
+    transition: transform 01s ease;
+}
+#third-card {
+    transition: transform 01.5s ease;
+}
+.card.enter {
+    transform: translateY(0);
+}
+.card:hover {
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    height: 200px;
+}
+.card-header img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.card-content {
+    background-color: white;
+    padding: 30px;
+}
+.card-title {
+    height: 20px;
+    margin: 0;
+}
+.card-excerpt {
+    color: #777;
+    margin: 10px 0 20px;
+}
+
+/* screen 3*/
+
+.shop-info {
+    display: flex;
+    height: 900px;
+    background-image: url(images/top-view-copy-space-multi-colored-marmalades-yellow-background.jpg);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.shop-info h1 {
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    display: flex;
+    padding: 30px;
+}
+.shop-info-card {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 1150px;
+    height: 600px;
+    background-color: transparent;
+    transition: 0.5s;
+}
+.shop-info-card:hover {
+    background-color: #fff;
+}
+.shop-card-image {
+    height: 450px;
+    width: 400px;
+    margin-left: 50px;
+}
+.shop-card-image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.shop-card-content {
+    padding: 30px;
+    margin-left: 300px;
+}
+.shop-card-title {
+    height: 20px;
+}
+.shop-info-text {
+    color: #777;
+    width: 450px;
+    height: 500px;
+    font-size: larger;
+    text-align: justify;
+    margin-right: 50px;
+}
+.shop-card-info-text {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    display: flex;
+    margin-left: -150px;
+}
+
+/* screen4 */
+
+.testimonial-body {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 10px;
+}
+
+.testimonial-container {
+    background-color: #476ce4;
+    color: #fff;
+    border-radius: 15px;
+    margin: 20px auto;
+    padding: 50px 50px;
+    max-width: 768px;
+    position: relative;
+}
+.testimonial {
+    line-height: 28px;
+    text-align: justify;
+}
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user .username {
+    margin: 0;
+}
+.progress-bar {
+    background-color: #fff;
+    height: 4px;
+    width: 100%;
+    animation: grow 5s linear infinite;
+}
+
+@keyframes grow {
+    0% {
+        transform: scaleX(0);
+    }
+}
+@media (max-width: 768px) {
+    .testimonial-container {
+        padding: 20px 30px;
+    }
+}
+
+/* screen 5 */
+
+.contactUs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 800px;
+}
+.contactUs h1 {
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    display: flex;
+    padding: 30px;
+}
+.contactUs-card {
+    margin: 0;
+    justify-content: end;
+    align-items: center;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 1150px;
+}
+
+.contactUs-card-content {
+    padding: 30px;
+    margin-left: 200px;
+    line-height: 35px;
+}
+.contactUs-card-title {
+    height: 20px;
+}
+.contactUs-info-text {
+    color: #4b4747;
+    width: 450px;
+    height: 400px;
+    font-size: larger;
+    text-align: justify;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+}
